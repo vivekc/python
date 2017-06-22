@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-06-20"
 
 ---
 
@@ -35,23 +35,24 @@ python-3.5.0
 ```
 {: codeblock}
 
-When a version is not specified, version 2.7.11 is chosen by default.
+When a version is not specified, version 2.7.13 is chosen by default.
 
 ### Available versions:
 {: #available_versions}
 
 The following Python versions are available in the
-[Python buildpack](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.5)
+[Python buildpack](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15)
 currently installed in {{site.data.keyword.Bluemix}}:
 
-* 2.7.10
-* 2.7.11
+* 2.7.12
+* 2.7.13
 * 3.3.5
 * 3.3.6
-* 3.4.3
-* 3.4.4
-* 3.5.0
-* 3.5.1
+* 3.4.5
+* 3.4.6
+* 3.5.2
+* 3.5.3
+* 3.6.0
 
 If your application requires a Python version that is not listed,
 you can use the external
