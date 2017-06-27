@@ -31,7 +31,7 @@ environment.  See [Using the starter applications](/docs/cfapps/starter_app_usag
 You can specify the version of Python to be used by your app by setting python-versionnumber in the runtime.txt file in the root of your application. For example:
 
 ```
-python-3.5.0
+python-3.6.0
 ```
 {: codeblock}
 
