@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-06-05"
+lastupdated: "2017-09-06"
 
 ---
 
@@ -15,14 +15,14 @@ lastupdated: "2017-06-05"
 {:download: .download}
 {:app_name: data-hd-keyref="app_name"}
 
-# Getting started with Python on Bluemix
+# Getting started tutorial
 {: #getting_started}
 
 * {: download} Congratulations, you deployed a Hello World sample application on {{site.data.keyword.Bluemix}}!  To get started, follow this step-by-step guide. Or, <a class="xref" href="http://bluemix.net" target="_blank" title="(Download sample code)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Download application code" />download the sample code</a> and explore on your own.
 
-By following this guide, you'll set up a development environment, deploy an app locally and on {{site.data.keyword.Bluemix}}, and integrate a {{site.data.keyword.Bluemix}} database service in your app.
+By following the Python getting started tutorial, you'll set up a development environment, deploy an app locally and on {{site.data.keyword.Bluemix}}, and integrate a {{site.data.keyword.Bluemix}} database service in your app.
 
-## Prerequisites
+## Before you begin
 {: #prereqs}
 
 You'll need the following:
@@ -31,7 +31,7 @@ You'll need the following:
 * [Git ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://git-scm.com/downloads){: new_window}
 * [Python ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.python.org/downloads/){: new_window}
 
-## 1. Clone the sample app
+## Step 1: Clone the sample app
 {: #clone}
 
 Now you're ready to start working with the app. Clone the repo and change to the directory where the sample app is located.
@@ -46,7 +46,7 @@ cd get-started-python
 
   Peruse the files in the *get-started-python* directory to familiarize yourself with the contents.
 
-## 2. Run the app locally
+## Step 2: Run the app locally
 {: #run_locally}
 
 See [The Hitchhiker’s Guide to Python! ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://docs.python-guide.org/en/latest/) for help setting up Python on your system.
@@ -55,7 +55,6 @@ See [The Hitchhiker’s Guide to Python! ![External link icon](../../icons/launc
 Install the dependencies listed in the [requirements.txt ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://pip.readthedocs.io/en/stable/user_guide/#requirements-files) file to be able to run the app locally.
 
 You can optionally use a [virtual environment ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://packaging.python.org/installing/#creating-and-using-virtual-environments) to avoid having these dependencies clash with those of other Python projects or your operating system.
-{: tip}
 
   ```
 pip install -r requirements.txt
@@ -78,7 +77,7 @@ python hello.py
  View your app at: http://localhost:8000
 
 
-## 3. Prepare the app for deployment
+## Step 3: Prepare the app for deployment
 {: #prepare}
 
 To deploy to {{site.data.keyword.Bluemix_notm}}, it can be helpful to set up a manifest.yml file. The manifest.yml includes basic information about your app, such as the name, how much memory to allocate for each instance and the route. We've provided a sample manifest.yml file in the `get-started-python` directory.
@@ -97,7 +96,7 @@ Open the manifest.yml file, and change the `name` from `GetStartedPython` to you
 In this manifest.yml file, **random-route: true** generates a random route for your app to prevent your route from colliding with others.  If you choose to, you can replace **random-route: true** with **host: myChosenHostName**, supplying a host name of your choice. [Learn more...](/docs/manageapps/depapps.html#appmanifest)
 {: tip}
 
-## 4. Deploy the app
+## Step 4: Deploy the app
 {: #deploy}
 
 You can use the Cloud Foundry CLI to deploy apps.
@@ -124,6 +123,8 @@ cf login
   ```
   {: pre}
 
+If you cannot log in using the `cf login` or `bx login` commands because you have a federated user ID, use either the `cf login --sso` or `bx login --sso` commands to log in with your single sign on ID. See [Logging in with a federated ID](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) to learn more.
+
 From within the *get-started-python* directory push your app to {{site.data.keyword.Bluemix_notm}}
   ```
 cf push
@@ -139,7 +140,7 @@ cf apps
   {: pre}
   command to view your apps status and see the URL.
 
-## 5. Add a database
+## Step 5: Add a database
 {: #add_database}
 
 Next, we'll add a NoSQL database to this application and set up the application so that it can run locally and on {{site.data.keyword.Bluemix_notm}}.
@@ -152,7 +153,7 @@ Next, we'll add a NoSQL database to this application and set up the application 
 Environment variables enable you to separate deployment settings from your source code. For example, instead of hardcoding a database password, you can store this in an environment variable which you reference in your source code. [Learn more...](/docs/manageapps/depapps.html#app_env)
 {: tip}
 
-## 6. Use the database
+## Step 6: Use the database
 {: #use_database}
 We're now going to update your local code to point to this database. We'll create a json file that will store the credentials for the services the application will use. This file will get used ONLY when the application is running locally. When running in {{site.data.keyword.Bluemix_notm}}, the credentials will be read from the VCAP_SERVICES environment variable.
 
