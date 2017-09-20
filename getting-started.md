@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-08-16"
+lastupdated: "2017-09-06"
 
 ---
 
@@ -55,7 +55,6 @@ See [The Hitchhiker’s Guide to Python! ![External link icon](../../icons/launc
 Install the dependencies listed in the [requirements.txt ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://pip.readthedocs.io/en/stable/user_guide/#requirements-files) file to be able to run the app locally.
 
 You can optionally use a [virtual environment ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://packaging.python.org/installing/#creating-and-using-virtual-environments) to avoid having these dependencies clash with those of other Python projects or your operating system.
-{: tip}
 
   ```
 pip install -r requirements.txt
@@ -123,6 +122,8 @@ Login to your {{site.data.keyword.Bluemix_notm}} account
 cf login
   ```
   {: pre}
+
+If you cannot log in using the `cf login` or `bx login` commands because you have a federated user ID, use either the `cf login --sso` or `bx login --sso` commands to log in with your single sign on ID. See [Logging in with a federated ID](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) to learn more.
 
 From within the *get-started-python* directory push your app to {{site.data.keyword.Bluemix_notm}}
   ```
