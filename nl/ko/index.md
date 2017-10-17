@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-06-20"
 
 ---
 
@@ -31,27 +31,28 @@ python_buildpack은 앱의 루트 디렉토리에 requirements.txt 파일 또는
 애플리케이션 루트에 있는 runtime.txt 파일에서 python-versionnumber를 설정하여 앱에서 사용할 Python 버전을 지정할 수 있습니다. 예: 
 
 ```
-python-3.5.0
+python-3.6.0
 ```
 {: codeblock}
 
-버전이 지정되지 않은 경우 기본적으로 버전 2.7.11이 선택됩니다.
+버전이 지정되지 않은 경우 기본적으로 버전 2.7.13이 선택됩니다.
 
 ### 사용 가능한 버전: 
 {: #available_versions}
 
 다음 Python 버전은 현재
-{{site.data.keyword.Bluemix}}에 설치된 [Python 빌드팩](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.5)에서 사용
+{{site.data.keyword.Bluemix}}에 설치된 [Python 빌드팩](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15)에서 사용
 가능합니다. 
 
-* 2.7.10
-* 2.7.11
+* 2.7.12
+* 2.7.13
 * 3.3.5
 * 3.3.6
-* 3.4.3
-* 3.4.4
-* 3.5.0
-* 3.5.1
+* 3.4.5
+* 3.4.6
+* 3.5.2
+* 3.5.3
+* 3.6.0
 
 나열되지 않은 Python 버전이 애플리케이션에 필요한 경우
 외부

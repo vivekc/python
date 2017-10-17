@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-06-20"
 
 ---
 
@@ -31,27 +31,28 @@ all'ambiente {{site.data.keyword.Bluemix}}.  Consulta [Utilizzo di applicazioni 
 Puoi specificare la versione di Python che deve essere utilizzata dalla tua applicazione impostando python-versionnumber nel file runtime.txt nella root della tua applicazione. Ad esempio:
 
 ```
-python-3.5.0
+python-3.6.0
 ```
 {: codeblock}
 
-Quando non viene specificata una versione, viene scelta per impostazione predefinita la versione 2.7.11.
+Quando non viene specificata una versione, viene scelta per impostazione predefinita la versione 2.7.13.
 
 ### Versioni disponibili:
 {: #available_versions}
 
 Le seguenti versioni Python sono disponibili nel [pacchetto
-di build Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.5) attualmente
+di build Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15) attualmente
 installato in {{site.data.keyword.Bluemix}}:
 
-* 2.7.10
-* 2.7.11
+* 2.7.12
+* 2.7.13
 * 3.3.5
 * 3.3.6
-* 3.4.3
-* 3.4.4
-* 3.5.0
-* 3.5.1
+* 3.4.5
+* 3.4.6
+* 3.5.2
+* 3.5.3
+* 3.6.0
 
 Se la tua applicazione richiede una versione di Python che non è elencata, puoi utilizzare
 il [pacchetto di build Python](https://github.com/cloudfoundry/python-buildpack) esterno

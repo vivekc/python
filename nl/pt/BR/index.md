@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-06-20"
 
 ---
 
@@ -34,26 +34,27 @@ do aplicativo iniciador.
 na raiz de seu aplicativo. Por exemplo:
 
 ```
-python-3.5.0
+python-3.6.0
 ```
 {: codeblock}
 
-Quando uma versão não é especificada, a versão 2.7.11 é escolhida por padrão.
+Quando uma versão não é especificada, a versão 2.7.13 é escolhida por padrão.
 
 ### Versões disponíveis:
 {: #available_versions}
 
 As seguintes versões do Python estão disponíveis no
-[buildpack Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.5) atualmente instalado no {{site.data.keyword.Bluemix}}:
+[buildpack Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15) atualmente instalado no {{site.data.keyword.Bluemix}}:
 
-* 2.7.10
-* 2.7.11
+* 2.7.12
+* 2.7.13
 * 3.3.5
 * 3.3.6
-* 3.4.3
-* 3.4.4
-* 3.5.0
-* 3.5.1
+* 3.4.5
+* 3.4.6
+* 3.5.2
+* 3.5.3
+* 3.6.0
 
 Se seu aplicativo requerer uma versão do Python não listada, é possível usar o
 [buildback Python](https://github.com/cloudfoundry/python-buildpack) externo para implementar o app.

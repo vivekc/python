@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-06-20"
 
 ---
 
@@ -29,25 +29,26 @@ lastupdated: "2017-01-25"
 您可以为您的应用程序指定要使用的 Python 版本，方法是在 runtime.txt 文件中设置 python-versionnumber，该文件位于您应用程序的根目录中。例如：
 
 ```
-python-3.5.0
+python-3.6.0
 ```
 {: codeblock}
 
-如果未指定版本，缺省情况下会选择 V2.7.11。
+如果未指定版本，缺省情况下会选择 V2.7.13。
 
 ### 可用版本：
 {: #available_versions}
 
-{{site.data.keyword.Bluemix}} 中当前安装的 [Python buildpack](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.5) 内提供了以下 Python 版本：
+{{site.data.keyword.Bluemix}} 中当前安装的 [Python buildpack](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15) 内提供了以下 Python 版本：
 
-* 2.7.10
-* 2.7.11
+* 2.7.12
+* 2.7.13
 * 3.3.5
 * 3.3.6
-* 3.4.3
-* 3.4.4
-* 3.5.0
-* 3.5.1
+* 3.4.5
+* 3.4.6
+* 3.5.2
+* 3.5.3
+* 3.6.0
 
 如果您应用程序所需的 Python 版本没有列在上述列表中，那么可以使用外部 [Python buildpack](https://github.com/cloudfoundry/python-buildpack) 来部署应用程序。
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-06-20"
 
 ---
 
@@ -30,25 +30,26 @@ Le pack python_buildpack sera utilisé si le répertoire racine de votre appli c
 Vous pouvez spécifier la version de Python à utiliser par votre appli en définissant python-versionnumber dans le fichier runtime.txt se trouvant à la racine de votre application. Par exemple :
 
 ```
-python-3.5.0
+python-3.6.0
 ```
 {: codeblock}
 
-Si aucune version n'est spécifiée, la version 2.7.11 est choisie par défaut.
+Si aucune version n'est spécifiée, la version 2.7.13 est sélectionnée par défaut.
 
 ### Versions disponibles :
 {: #available_versions}
 
-Les versions de Python suivantes sont disponibles dans le [pack de construction Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.5) qui est installé dans {{site.data.keyword.Bluemix}} :
+Les versions de Python suivantes sont disponibles dans le [pack de construction Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15) qui est installé dans {{site.data.keyword.Bluemix}} :
 
-* 2.7.10
-* 2.7.11
+* 2.7.12
+* 2.7.13
 * 3.3.5
 * 3.3.6
-* 3.4.3
-* 3.4.4
-* 3.5.0
-* 3.5.1
+* 3.4.5
+* 3.4.6
+* 3.5.2
+* 3.5.3
+* 3.6.0
 
 Si votre application requiert une version de Python qui n'est pas répertoriée, vous pouvez
 utiliser le [pack de construction Python](https://github.com/cloudfoundry/python-buildpack) externe pour

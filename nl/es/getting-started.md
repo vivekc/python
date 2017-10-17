@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-09-06"
 
 ---
 
@@ -15,14 +15,14 @@ lastupdated: "2017-03-23"
 {:download: .download}
 {:app_name: data-hd-keyref="app_name"}
 
-# Iniciación a Python en Bluemix
+# Guía de aprendizaje de iniciación
 {: #getting_started}
 
 * {: download} Enhorabuena, ha desplegado una aplicación de ejemplo Hello World en {{site.data.keyword.Bluemix}}.  Para empezar a trabajar, siga los pasos de esta guía. O bien <a class="xref" href="http://bluemix.net" target="_blank" title="(Descargue el código de ejemplo)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="Descargue el código de aplicación" />descargue el código de ejemplo</a> y explore por su cuenta.
 
-Si sigue esta guía, configurará un entorno de desarrollo, desplegará una app localmente y en {{site.data.keyword.Bluemix}} e integrará un servicio de base de datos de {{site.data.keyword.Bluemix}} en su app.
+Si sigue la guía de aprendizaje de iniciación de Python, configurará un entorno de desarrollo, desplegará una app localmente y en {{site.data.keyword.Bluemix}} e integrará un servicio de base de datos de {{site.data.keyword.Bluemix}} en su app.
 
-## Requisitos previos
+## Antes de empezar
 {: #prereqs}
 
 Necesitará lo siguiente:
@@ -31,7 +31,7 @@ Necesitará lo siguiente:
 * [Git ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://git-scm.com/downloads){: new_window}
 * [Python ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.python.org/downloads/){: new_window}
 
-## 1. Clone la app de ejemplo
+## Paso 1: Clone la app de ejemplo
 {: #clone}
 
 Ahora está listo para empezar a trabar con la app. Clone el repositorio y vaya al directorio donde se encuentra la app de ejemplo.
@@ -46,7 +46,7 @@ cd get-started-python
 
   Lea detenidamente los archivos del directorio *get-started-python* para familiarizarse con el contenido.
 
-## 2. Ejecute la app localmente
+## Paso 2: Ejecute la app localmente
 {: #run_locally}
 
 Consulte [The Hitchhiker’s Guide to Python! ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://docs.python-guide.org/en/latest/) para obtener ayuda para configurar Python en el sistema.
@@ -55,7 +55,6 @@ Consulte [The Hitchhiker’s Guide to Python! ![Icono de enlace externo](../../i
 Instale las dependencias que aparecen en el archivo [requirements.txt ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://pip.readthedocs.io/en/stable/user_guide/#requirements-files) para poder ejecutar la app localmente.
 
 Si lo desea, puede utilizar un [entorno virtual![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://packaging.python.org/installing/#creating-and-using-virtual-environments) para evitar que estas dependencias entren en conflicto con las de otros proyectos Python o del sistema operativo.
-{: tip}
 
   ```
 pip install -r requirements.txt
@@ -78,7 +77,7 @@ python hello.py
  Visualice la app en: http://localhost:8000.
 
 
-## 3. Prepare la app para el despliegue
+## Paso 3: Prepare la app para el despliegue
 {: #prepare}
 
 Para desplegar en {{site.data.keyword.Bluemix_notm}}, puede resultarle útil configurar un archivo manifest.yml. El archivo manifest.yml incluye información básica sobre la app, como por ejemplo el nombre, la cantidad de memoria a asignar para cada instancia y la ruta. Encontrará un archivo manifest.yml de ejemplo en el directorio `get-started-python`.
@@ -97,7 +96,7 @@ Abra el archivo manifest.yml y cambie el valor de `name` de `GetStartedPython` p
 En este archivo manifest.yml, **random-rout: true** genera una ruta aleatoria para la app a fin de evitar que su ruta entre en conflicto con otras.  Si lo desea, puede sustituir **random-route: true** por **host: myChosenHostName**, especificando el nombre de host que elija. [Más información...](/docs/manageapps/depapps.html#appmanifest)
 {: tip}
 
-## 4. Despliegue la app
+## Paso 4: Despliegue la app
 {: #deploy}
 
 Puede utilizar la CLI de Cloud Foundry para desplegar apps.
@@ -115,6 +114,7 @@ Sustituya *API-endpoint* en el mandato por un punto final de API de la siguiente
 | https://api.ng.bluemix.net     | EE.UU. Sur       |
 | https://api.eu-gb.bluemix.net  | Reino Unido |
 | https://api.au-syd.bluemix.net | Sidney         |
+| https://api.eu-de.bluemix.net | Frankfurt |
 
 Inicie una sesión en su cuenta de {{site.data.keyword.Bluemix_notm}}
 
@@ -122,6 +122,8 @@ Inicie una sesión en su cuenta de {{site.data.keyword.Bluemix_notm}}
 cf login
   ```
   {: pre}
+
+Si no puede iniciar sesión utilizando los mandatos `cf login` o `bx login` porque tiene un ID de usuario federado, utilice los mandatos `cf login --sso` o `bx login --sso` para iniciar sesión con el ID de inicio de sesión único. Consulte [Inicio de sesión con un ID federado](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id) para obtener más información.
 
 Desde el directorio *get-started-python*, envíe por push la app a {{site.data.keyword.Bluemix_notm}}
   ```
@@ -138,20 +140,20 @@ cf apps
   {: pre}
   para ver el estado de su app y ver el URL.
 
-## 5. Añada una base de datos
+## Paso 5: Añada una base de datos
 {: #add_database}
 
 A continuación, añadiremos una base de datos NoSQL a esta aplicación y configuraremos la aplicación para que se pueda ejecutar localmente y en {{site.data.keyword.Bluemix_notm}}.
 
 1. Inicie una sesión en {{site.data.keyword.Bluemix_notm}} en su navegador. Vaya al `Panel de control`. Seleccione su aplicación pulsando su nombre en la columna `Nombre`.
 2. Pulse `Conexiones` y luego `Conectar nuevo`.
-2. En la sección `Data & Analytics`, seleccione `BD Cloudant NoSQL` y `Crear` para crear el servicio.
+2. En la sección `Data &  Analytics`, seleccione `BD Cloudant NoSQL` y `Crear` para crear el servicio.
 3. Seleccione `Volver a transferir` cuando se le solicite. {{site.data.keyword.Bluemix_notm}} reiniciará la aplicación y proporcionará las credenciales de base de datos para la aplicación mediante la variable de entorno `VCAP_SERVICES`. Esta variable de entorno sólo está disponible para la aplicación cuando se ejecuta en {{site.data.keyword.Bluemix_notm}}.
 
 Las variables de entorno le permiten separar valores de despliegue del código fuente. Por ejemplo, en lugar codificar una contraseña de base de datos, puede guardarla en una variable de entorno a la que haga referencia en el código fuente. [Más información...](/docs/manageapps/depapps.html#app_env)
 {: tip}
 
-## 6. Utilice la base de datos
+## Paso 6: Utilice la base de datos
 {: #use_database}
 Ahora vamos a actualizar el código local para que apunte a esta base de datos. Crearemos un archivo json que contendrá las credenciales para los servicios que utilizará la aplicación. Este archivo SOLO se utilizará cuando la aplicación se ejecute localmente. Cuando se ejecute en {{site.data.keyword.Bluemix_notm}}, las credenciales se leerán de la variable de entorno VCAP_SERVICES.
 

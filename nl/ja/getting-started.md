@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-03-23"
+lastupdated: "2017-09-06"
 
 ---
 
@@ -15,14 +15,14 @@ lastupdated: "2017-03-23"
 {:download: .download}
 {:app_name: data-hd-keyref="app_name"}
 
-# Bluemix での Python 入門
+# 入門チュートリアル
 {: #getting_started}
 
 * {: download} Hello World サンプル・アプリケーションが {{site.data.keyword.Bluemix}} に正常にデプロイされました。入門として、このステップバイステップのガイドに従って作業してください。または、<a class="xref" href="http://bluemix.net" target="_blank" title="(サンプル・コードのダウンロード)"><img class="hidden" src="../../images/btn_starter-code.svg" alt="アプリケーション・コードのダウンロード" />サンプル・コードをダウンロード</a>して、ご自身で探索してください。
 
-このガイドに従うことによって、開発環境をセットアップし、ローカルおよび {{site.data.keyword.Bluemix}} でアプリケーションをデプロイし、{{site.data.keyword.Bluemix}} データベース・サービスをアプリケーションに統合します。
+以下の Python 入門チュートリアルに従って、開発環境のセットアップ、ローカルおよび {{site.data.keyword.Bluemix}} でのアプリケーションのデプロイ、および {{site.data.keyword.Bluemix}} データベース・サービスのアプリケーションへの統合を行います。
 
-## 前提条件
+## 始める前に
 {: #prereqs}
 
 以下が必要です。
@@ -31,7 +31,7 @@ lastupdated: "2017-03-23"
 * [Git ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://git-scm.com/downloads){: new_window}
 * [Python ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.python.org/downloads/){: new_window}
 
-## 1. サンプル・アプリケーションの複製
+## ステップ 1: サンプル・アプリケーションを複製する
 {: #clone}
 
 アプリケーションの操作を開始する準備ができました。リポジトリーを複製して、サンプル・アプリケーションがあるディレクトリーに変更します。
@@ -46,7 +46,7 @@ cd get-started-python
 
   *get-started-python* ディレクトリー内のファイルを詳細に調べて、内容をよく理解します。
 
-## 2. アプリケーションのローカルでの実行
+## ステップ 2: アプリケーションをローカルで実行する
 {: #run_locally}
 
 ご使用のシステムでの Python のセットアップに関するヘルプについては、[『The Hitchhiker’s Guide to Python!』![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](http://docs.python-guide.org/en/latest/)を参照してください。
@@ -55,7 +55,7 @@ cd get-started-python
 ローカルでアプリケーションを実行できるようにするには、[requirements.txt ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://pip.readthedocs.io/en/stable/user_guide/#requirements-files) ファイルにリストされている依存関係をインストールします。
 
 オプションで[仮想環境![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://packaging.python.org/installing/#creating-and-using-virtual-environments)を使用して、これらの依存関係が他の Python プロジェクトやご使用のオペレーティング・システムの依存関係と衝突するのを避けることができます。
-{: tip}
+
 
   ```
 pip install -r requirements.txt
@@ -78,7 +78,7 @@ python hello.py
  http://localhost:8000 でアプリケーションを表示します。
 
 
-## 3. デプロイメントのためのアプリケーションの準備
+## ステップ 3: デプロイメントのためにアプリケーションを準備する
 {: #prepare}
 
 {{site.data.keyword.Bluemix_notm}} にデプロイするには、manifest.yml ファイルをセットアップすると役に立つことがあります。manifest.yml には、アプリケーションに関する基本的な情報 (名前、各インスタンス用に割り振るメモリー量、経路など) が含まれます。`get-started-python` ディレクトリーにサンプルの manifest.yml ファイルが用意されています。
@@ -97,7 +97,7 @@ manifest.yml ファイルを開き、`name` を `GetStartedPython` からご使�
 この manifest.yml ファイル内の **random-route: true** は、アプリケーション用にランダムな経路を生成して、経路が他と衝突するのを回避します。任意のホスト名を指定して、**random-route: true** を **host: myChosenHostName** に置き換えることも選択できます。[詳細はこちら...](/docs/manageapps/depapps.html#appmanifest)
 {: tip}
 
-## 4. アプリケーションのデプロイ
+## ステップ 4: アプリケーションをデプロイする
 {: #deploy}
 
 Cloud Foundry CLI を使用してアプリケーションをデプロイできます。
@@ -110,11 +110,12 @@ cf api <API-endpoint>
 
 コマンド内の *API-endpoint* は以下のリストにある API エンドポイントのいずれかで置き換えてください。
 
-|URL                             |地域          |
+|URL|地域|
 |:-------------------------------|:---------------|
-| https://api.ng.bluemix.net     | 米国南部       |
-| https://api.eu-gb.bluemix.net  | 英国 |
-| https://api.au-syd.bluemix.net | シドニー         |
+| https://api.ng.bluemix.net| 米国南部|
+| https://api.eu-gb.bluemix.net| 英国|
+| https://api.au-syd.bluemix.net| シドニー|
+| https://api.eu-de.bluemix.net | フランクフルト     |
 
 {{site.data.keyword.Bluemix_notm}} アカウントにログインします。
 
@@ -123,35 +124,37 @@ cf login
 ```
   {: pre}
 
+フェデレーテッド・ユーザー ID を使用しているために `cf login` または `bx login` のコマンドを使用してログインできない場合は、`cf login --sso` または `bx login --sso` のコマンドを使用し、シングル・サインオン ID を使ってログインしてください。詳しくは、[『フェデレーテッド ID を使用したログイン』](https://console.bluemix.net/docs/cli/login_federated_id.html#federated_id)を参照してください。
+
 *get-started-python* ディレクトリー内から、アプリケーションを {{site.data.keyword.Bluemix_notm}} にプッシュします。
   ```
 cf push
 ```
   {: pre}
 
-これには時間がかかることがあります。デプロイメント・プロセスでエラーが発生した場合、`cf logs <Your-App-Name> --recent` コマンドを使用してトラブルシューティングできます。
+これには時間がかかることがあります。デプロイメント・プロセスでエラーが発生した場合、`cf logs <Your-App-Name> --recent` コマンドを使用してトラブルシューティングすることができます。
 
-デプロイメントが完了すると、アプリケーションが実行中であることを示すメッセージが表示されます。push コマンドの出力にリストされている URL でアプリケーションを表示します。また、
+デプロイメントが完了すると、アプリケーションが実行中であることを示すメッセージが表示されます。push コマンドの出力にリストされている URL でアプリケーションを表示します。また、以下のコマンドを実行することもできます。
   ```
 cf apps
   ```
   {: pre}
-  コマンドを発行して、アプリケーションの状況と URL を確認することもできます。
+  このコマンドにより、アプリケーションの状況と URL が表示されます。
 
-## 5. データベースの追加
+## ステップ 5: データベースを追加する
 {: #add_database}
 
 次に、NoSQL データベースをこのアプリケーションに追加して、ローカルおよび {{site.data.keyword.Bluemix_notm}} 上で実行できるようにアプリケーションをセットアップします。
 
 1. ご使用のブラウザーで {{site.data.keyword.Bluemix_notm}} にログインします。`「ダッシュボード」`を参照します。`「名前」`列でアプリケーション名をクリックして、そのアプリケーションを選択します。
 2. `「接続」`、`「新規に接続」`の順にクリックします。
-2. `「データおよび分析」`セクションで、`「Cloudant NoSQL DB」`を選択して、サービスを`作成`します。
+2. `「データおよび分析」`セクションで、`「Cloudant NoSQL DB」`を選択して、サービスを`「作成」`します。
 3. プロンプトが出されたら、`「再ステージ」`を選択します。{{site.data.keyword.Bluemix_notm}} はアプリケーションを再始動し、`VCAP_SERVICES` 環境変数を使用してデータベース資格情報をアプリケーションに提供します。この環境変数は、アプリケーションが {{site.data.keyword.Bluemix_notm}} で実行されている場合にのみアプリケーションで使用できます。
 
 環境変数を使用すると、デプロイメント設定をソース・コードと分離することができます。例えば、データベース・パスワードをハードコーディングする代わりに、環境変数にそれを保管して、ソース・コードではその環境変数を参照するようにできます。[詳細はこちら...](/docs/manageapps/depapps.html#app_env)
 {: tip}
 
-## 6. データベースの使用
+## ステップ 6: データベースを使用する
 {: #use_database}
 次に、このデータベースを指すようにローカル・コードを更新します。アプリケーションが使用するサービスの資格情報を保管する json ファイルを作成します。このファイルは、アプリケーションがローカルで実行されている場合にのみ使用されます。{{site.data.keyword.Bluemix_notm}} で実行されているときには、資格情報は VCAP_SERVICES 環境変数から読み取られます。
 
