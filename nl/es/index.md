@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-06-20"
 
 ---
 
@@ -14,10 +14,10 @@ lastupdated: "2017-01-25"
 {: #python_runtime}
 
 El tiempo de ejecución de Python en {{site.data.keyword.Bluemix}} está basado en el python_buildpack.
-El python_buildpack proporciona un entorno de ejecución completo para aplicaciones Python 2 y Python 3.
+El python_buildpack proporciona un entorno de ejecución completo para apps Python 2 y Python 3.
 {: shortdesc}
 
-El python_buildpack se utilizará si el directorio raíz de la aplicación contiene un archivo requirements.txt o un archivo setup.py.
+El python_buildpack se utilizará si el directorio raíz de la app contiene un archivo requirements.txt o un archivo setup.py.
 
 ## Aplicación de inicio
 {: #starter_application}
@@ -30,27 +30,28 @@ El python_buildpack se utilizará si el directorio raíz de la aplicación conti
 Puede especificar la versión de Python que va a utilizar la app estableciendo python-versionnumber en el archivo runtime.txt en la raíz de la aplicación. Por ejemplo:
 
 ```
-python-3.5.0
+python-3.6.0
 ```
 {: codeblock}
 
-Cuando no se especifique una versión, se elegirá la versión 2.7.11 de forma predeterminada.
+Cuando no se especifique una versión, se elegirá la versión 2.7.13 de forma predeterminada.
 
 ### Versiones disponibles:
 {: #available_versions}
 
 Las siguientes versiones de Python están disponibles en el
-[paquete de compilación de Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.5)
+[paquete de compilación de Python](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15)
 actualmente instalado en {{site.data.keyword.Bluemix}}:
 
-* 2.7.10
-* 2.7.11
+* 2.7.12
+* 2.7.13
 * 3.3.5
 * 3.3.6
-* 3.4.3
-* 3.4.4
-* 3.5.0
-* 3.5.1
+* 3.4.5
+* 3.4.6
+* 3.5.2
+* 3.5.3
+* 3.6.0
 
 Si la aplicación requiere una versión de Python que no aparece en la lista,
 puede utilizar el

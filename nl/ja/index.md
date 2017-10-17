@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-06-20"
 
 ---
 
@@ -30,25 +30,26 @@ python_buildpack は、アプリケーションのルート・ディレクトリ
 アプリケーションのルートにある runtime.txt ファイルで python-versionnumber を設定することにより、アプリケーションで使用する Python のバージョンを指定できます。例えば、次のように指定します。
 
 ```
-python-3.5.0
+python-3.6.0
 ```
 {: codeblock}
 
-バージョンを指定しない場合は、デフォルトでバージョン 2.7.11 が選択されます。
+バージョンを指定しない場合は、デフォルトでバージョン 2.7.13 が選択されます。
 
 ### 使用可能なバージョン:
 {: #available_versions}
 
-現在 {{site.data.keyword.Bluemix}} にインストールされている [Python ビルドパック](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.5)では、以下の Python バージョンが使用できます。
+現在 {{site.data.keyword.Bluemix}} にインストールされている [Python ビルドパック](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15)では、以下の Python バージョンが使用できます。
 
-* 2.7.10
-* 2.7.11
+* 2.7.12
+* 2.7.13
 * 3.3.5
 * 3.3.6
-* 3.4.3
-* 3.4.4
-* 3.5.0
-* 3.5.1
+* 3.4.5
+* 3.4.6
+* 3.5.2
+* 3.5.3
+* 3.6.0
 
 アプリケーションが、リストされていない Python バージョンを必要とする場合は、外部の [Python ビルドパック](https://github.com/cloudfoundry/python-buildpack)を使用してアプリケーションをデプロイできます。
 

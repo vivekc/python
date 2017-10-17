@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-01-25"
+lastupdated: "2017-06-20"
 
 ---
 
@@ -30,25 +30,26 @@ python_buildpack 為 Python 2 和 Python 3 應用程式都有提供完整的運�
 您可以在應用程式根目錄的 runtime.txt 檔案中設定 python-versionnumber，以指定應用程式要使用的 Python 版本。例如：
 
 ```
-python-3.5.0
+python-3.6.0
 ```
 {: codeblock}
 
-如果未指定版本，依預設會選擇 2.7.11 版。
+如果未指定版本，依預設會選擇 2.7.13 版。
 
 ### 可用的版本：
 {: #available_versions}
 
-目前安裝在 {{site.data.keyword.Bluemix}} 中的 [Python 建置套件](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.5)提供下列 Python 版本：
+目前安裝在 {{site.data.keyword.Bluemix}} 中的 [Python 建置套件](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15)提供下列 Python 版本：
 
-* 2.7.10
-* 2.7.11
+* 2.7.12
+* 2.7.13
 * 3.3.5
 * 3.3.6
-* 3.4.3
-* 3.4.4
-* 3.5.0
-* 3.5.1
+* 3.4.5
+* 3.4.6
+* 3.5.2
+* 3.5.3
+* 3.6.0
 
 如果您的應用程式需要未列出的 Python 版本，可以使用外部 [Python 建置套件](https://github.com/cloudfoundry/python-buildpack)來部署該應用程式。
 
