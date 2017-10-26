@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-20"
+lastupdated: "2017-10-25"
 
 ---
 
@@ -22,7 +22,7 @@ The python_buildpack will be used if your app's root directory contains a requir
 ## Starter application
 {: #starter_application}
 
-{{site.data.keyword.Bluemix}} provides a Python starter application.  The Python starter application is a simple Python app that provides a template that you can use for your app. You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix}}
+{{site.data.keyword.Bluemix_notm}} provides a Python starter application.  The Python starter application is a simple Python app that provides a template that you can use for your app. You can experiment with the starter app, and make and push changes to the {{site.data.keyword.Bluemix_notm}}
 environment.  See [Using the starter applications](/docs/cfapps/starter_app_usage.html) for help with using the starter application.
 
 ## Runtime versions
@@ -42,7 +42,7 @@ When a version is not specified, version 2.7.13 is chosen by default.
 
 The following Python versions are available in the
 [Python buildpack](https://github.com/cloudfoundry/python-buildpack/releases/tag/v1.5.15)
-currently installed in {{site.data.keyword.Bluemix}}:
+currently installed in {{site.data.keyword.Bluemix_notm}}:
 
 * 2.7.12
 * 2.7.13
